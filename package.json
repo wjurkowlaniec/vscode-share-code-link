@@ -1,0 +1,43 @@
+{
+	"name": "vscode-extension-share-code-link",
+	"displayName": "share-code-link",
+	"description": "Share code link extensionfor VS Code",
+	"version": "0.0.1",
+	"author": {
+		"name": "Wojciech Jurkowlaniec",
+		"email": "wojtek.jurkowlaniec@gmail.com"
+	},
+	"repository": "https://github.com/wjurkowlaniec/vscode-share-code-link",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.shareCodeLink"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.shareCodeLink",
+				"title": "Share code link"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@types/vscode": "^1.34.0",
+		"@typescript-eslint/eslint-plugin": "^4.16.0",
+		"@typescript-eslint/parser": "^4.16.0",
+		"eslint": "^7.21.0",
+		"typescript": "^4.5.5"
+	}
+}
